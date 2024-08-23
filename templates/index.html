@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Price Range Predictor</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Mobile Price Range Predictor</h1>
+        <form method="post" onsubmit="showPrediction(); return false;">
+            <div class="form-group">
+                <label for="battery_power">Battery Power:</label>
+                <input type="number" class="form-control" name="battery_power" required>
+            </div>
+            <div class="form-group">
+                <label for="int_memory">Internal Memory:</label>
+                <input type="number" class="form-control" name="int_memory" required>
+            </div>
+            <div class="form-group">
+                <label for="mobile_wt">Mobile Weight:</label>
+                <input type="number" class="form-control" name="mobile_wt" required>
+            </div>
+            <div class="form-group">
+                <label for="pc">PC:</label>
+                <input type="number" class="form-control" name="pc" required>
+            </div>
+            <div class="form-group">
+                <label for="px_height">Pixel Height:</label>
+                <input type="number" class="form-control" name="px_height" required>
+            </div>
+            <div class="form-group">
+                <label for="px_width">Pixel Width:</label>
+                <input type="number" class="form-control" name="px_width" required>
+            </div>
+            <div class="form-group">
+                <label for="ram">RAM:</label>
+                <input type="number" class="form-control" name="ram" required>
+            </div>
+            <div class="form-group">
+                <label for="sc_h">Screen Height:</label>
+                <input type="number" class="form-control" name="sc_h" required>
+            </div>
+            <div class="form-group">
+                <label for="sc_w">Screen Width:</label>
+                <input type="number" class="form-control" name="sc_w" required>
+            </div>
+            <div class="form-group">
+                <label for="talk_time">Talk Time:</label>
+                <input type="number" class="form-control" name="talk_time" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Predict</button>
+        </form>
+    </div>
+
+    <!-- Modal for Prediction Result -->
+    <div class="modal fade" id="predictionModal" tabindex="-1" aria-labelledby="predictionModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="predictionModalLabel">Prediction Result</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- The prediction result will be dynamically inserted here -->
+                    <h2 id="predictionOutput">Predicted Price Range: </h2>
+                    <p>0 - low cost<br> 1 - medium cost<br> 2 - high cost<br> 3 - very high cost</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom JS to handle modal -->
+    <script>
+        function showPrediction() {
+            // Simulating prediction logic; replace this with actual logic
+            var prediction = 1; // Example prediction value (replace with actual logic)
+            
+            // Dynamically update the modal content
+            document.getElementById('predictionOutput').innerText = "Predicted Price Range: " + prediction;
+            
+            // Show the modal
+            $('#predictionModal').modal('show');
+        }
+    </script>
+</body>
+</html>
