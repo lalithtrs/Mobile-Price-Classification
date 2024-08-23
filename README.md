@@ -92,6 +92,12 @@ To run this project locally:
     ```
 4. Access the web interface at `http://localhost:5000`.
 
+Screenshots
+
+![alt text](image.png)
+
+![alt text](image-1.png)
+
 ## Contributing
 
 We welcome contributions to improve this project. Please feel free to submit a pull request or raise an issue.
