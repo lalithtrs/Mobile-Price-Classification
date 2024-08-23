@@ -108,5 +108,5 @@ This project is licensed under the MIT License.
 
 ---
 
-Thank you for checking out the Mobile Price Range Predictor project! If you have any questions or feedback, please feel free to reach out.
+Thank you for checking out the Mobile Price Range Classification project! If you have any questions or feedback, please feel free to reach out.
 
